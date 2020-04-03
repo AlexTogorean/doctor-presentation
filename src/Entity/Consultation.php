@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="consultations")
  * @ORM\Entity(repositoryClass="App\Repository\ConsultationRepository")
  */
 class Consultation
@@ -35,6 +36,16 @@ class Consultation
      * @ORM\Column(type="text", nullable=true)
      */
     private $message;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $acceptTerms;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $acceptGdpr;
 
     public function getId(): ?int
     {
@@ -85,6 +96,30 @@ class Consultation
     public function setMessage(?string $message): self
     {
         $this->message = $message;
+
+        return $this;
+    }
+
+    public function getAcceptTerms(): ?bool
+    {
+        return $this->acceptTerms;
+    }
+
+    public function setAcceptTerms(bool $acceptTerms): self
+    {
+        $this->acceptTerms = $acceptTerms;
+
+        return $this;
+    }
+
+    public function getAcceptGdpr(): ?bool
+    {
+        return $this->acceptGdpr;
+    }
+
+    public function setAcceptGdpr(bool $acceptGdpr): self
+    {
+        $this->acceptGdpr = $acceptGdpr;
 
         return $this;
     }
