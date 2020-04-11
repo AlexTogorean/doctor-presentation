@@ -3,10 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet"/>
+        {% endblock %}
     </head>
+
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container-fluid page">
+            <div class="header row">
+                <div class="logo col-sm-2">
+                    <a href="{{ path('app_homepage') }}"><img src="{{ asset('assets/images/logo.png') }}"></a>
+                </div>
+                <div class="menu col-sm-10 row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"><a href="{{ path('app_consultation') }}">Consultatie on-line</a></div>
+                    <div class="col-md-2"><a href="{{ path('app_homepage') }}#doctor">Doctor</a></div>
+                    <div class="col-md-2"><a href="{{ path('app_homepage') }}#prices">Tarife</a></div>
+                    <div class="col-md-2"><a href="{{ path('app_homepage') }}#gallery">Galerie</a></div>
+                    <!-- <ul>
+                        <li><a href="#">Consultanta on-line</a></li>
+                        <li><a href="#">Cabinet</a></li>
+                        <li><a href="#">Doctor</a></li>
+                    </ul> -->
+                </div>
+            </div>
+
+            {% block body %}{% endblock %}
+
+            <div class="footer-pages row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    Informatii utile
+                </div>
+                <div class="col-md-4">
+                    Unde ne gasiti
+                </div>
+            </div>
+            <div class="footer-credits row">
+                <div class="copyright-text col-md-10">© 2020 Paediatrics Best Practice</div>
+                <div class="design-by col-md-2">Design by</div>
+            </div>
+        </div>
+
+        {% block javascripts %}
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script src="{{ asset('assets/js/app.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

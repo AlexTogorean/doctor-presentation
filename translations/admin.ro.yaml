@@ -1,0 +1,7 @@
+Name: Nume
+Consultation: Consultatie On-line
+action:
+    search: Cauta ...
+    edit: Modifica
+    delete: Sterge
+    new: Adauga consultatie manual

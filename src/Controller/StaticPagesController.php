@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class StaticPagesController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="app_homepage")
      */
     public function homepage()
     {

@@ -3,12 +3,103 @@
 {% block title %}Pagina de start{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="banner row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="welcome">
+                <span>Bine ati venit</span><br><br>
+                <a href="{{ path('app_consultation') }}"><button class="btn">Programeaza o consultatie on-line</button></a>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="section row" id="doctor">
+            <div class="col-md-5 section-about">
+                <img src="{{ asset('assets/images/doctor.jpg') }}" width="100%">
+                <div>Dr. Burlacu Maria Monica<br>
+                    Medic Specialist Pediatrie</div>
+            </div>
+            <div class="col-md-7 section-about">
+                Numele meu este Burlacu Maria Monica. 
+                Sunt absolventa a Facultății de Medicina și Farmacie "Iuliu Hatieganu" Cluj Napoca, promoția 2007. 
+                Îndrăgostită de copii am știut din prima zi de medicina că visul meu este pediatria. 
+                Am avut marea șansă și ocazie să lucrez  6 ani în Irlanda, la 8 spitale universitare , 
+                inclusiv la spitalele de top din Dublin. 
+                (Coombe University Hospital Rotunda University Hospital, OLCHC, Temple Street National Childen Hospital ) 
+                Am lucrat cu pacienți și cu medici din toate colțurile lumii. 
+                Am fost apreciată de directorii și profesorii universitari din spitalele unde am lucrat, 
+                de la care în semn de apreciere am primit o vază personalizata (o puteți vedea în poze), 
+                care spune mai multe decât aș putea eu să spun. 
+                Am predat studenților din Irlanda, am participat la numeroase conferințe internaționale. 
+                <br><br>
+                De ce am venit acasă? Pentru ca pur și simplu am simțit că România este casa mea. 
+                Nopțile lungi și istovitoare din urgente, săptămâni după săptămâni de ploi și vânt, absenta soarelui, 
+                iernile fără zăpadă... sunt doar câteva dintre motivele principale.
+                <br><br>
+                În anul 2018 am participat la cursurile de ecografie de sold, organizate la Dublin, 
+                sub îndrumarea marelui profesor Graff, fondator al ecografiei de sold. 
+                In anul 2019 am participat  la cursul de ecografie transfontanelara organizat la Cambridge . 
+                În anul 2019 am sustinut cu succes examenul de competența în ultrasonografie organizat la Cluj Napoca 
+                sub îndrumarea domnilor  profesori Petre Mircea, Radu Badea, Sorin Dudea. 
+                <br><br>
+                Sunt pediatru, dar pentru că sunt si mămica a doi copilași, înțeleg extrem de bine toate greutățile copilăriei. 
+                Viroze, bolile copilăriei, gastroenterite, pneumonii, amigdalite, erupții, alergii... 
+                și multe altele le-am experimentat din păcate și din postura de părinte. 
+                A fost greu... dar foarte util, deoarece acum privesc lucrurile cu multă empatie și responsabilitate.
+                <br><br>
+                Aștept cu nerăbdare sa ne cunoaștem.
+            </div>
+    </div>
+    <div class="row" id="prices">
+        <div class="section-title">Tarife</div>
+    </div>
+    <div class="row">
+        <div class="prices">
+            <table>
+                <tr>
+                    <td>Consultatie</td>
+                    <td>In zilele de Luni-Vineri</td>
+                    <td>Sambata, Duminica si sarbatori legale</td>
+                </tr>
+                <tr>
+                    <td>Consult de specialitate pediatrie</td>
+                    <td>150 RON</td>
+                    <td>200 RON</td>
+                </tr>
+                <tr>
+                    <td>Consult de specialitate 2 copii la aceeasi programare</td>
+                    <td>220 RON</td>
+                    <td>300 RON</td>
+                </tr>
+                <tr>
+                    <td>Control (max. 7 zile de la consult)</td>
+                    <td>75 RON</td>
+                    <td>100 RON</td>
+                </tr>
+                <tr>
+                    <td>ecografie de sold</td>
+                    <td colspan="2">150 RON</td>
+                </tr>
+                <tr>
+                    <td>ecografie toracica</td>
+                    <td colspan="2">100 RON</td>
+                </tr>
+                <tr>
+                    <td>ecografie abdominala</td>
+                    <td colspan="2">150 RON</td>
+                </tr>
+                <tr>
+                    <td>Consultații on-line</td>
+                    <td colspan="2">100 RON</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Pagina de start ✅</h1>
-</div>
+    {#<div class="row" id="gallery">
+        <div class="section-title">Galerie</div>
+    </div>
+    <div class="row gallery-caroussels">
+
+    </div>#}
 {% endblock %}
