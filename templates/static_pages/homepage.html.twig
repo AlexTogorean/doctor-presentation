@@ -1,55 +1,221 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pagina de start{% endblock %}
+{% block title %}Pediatrie Floresti{% endblock %}
 
 {% block body %}
     <div class="banner row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="welcome">
-                <span>Bine ati venit</span><br><br>
-                <a href="{{ path('app_consultation') }}"><button class="btn">Programeaza o consultatie on-line</button></a>
+                <span>Bine ați venit</span><br><br>
+                <a href="{{ path('app_consultation') }}"><button class="btn">Programează o consultanță on-line</button></a>
             </div>
         </div>
         <div class="col-md-3"></div>
     </div>
-    <div class="section row" id="doctor">
-            <div class="col-md-5 section-about">
-                <img src="{{ asset('assets/images/doctor.jpg') }}" width="100%">
-                <div>Dr. Burlacu Maria Monica<br>
-                    Medic Specialist Pediatrie</div>
-            </div>
-            <div class="col-md-7 section-about">
-                Numele meu este Burlacu Maria Monica. 
-                Sunt absolventa a Facultății de Medicina și Farmacie "Iuliu Hatieganu" Cluj Napoca, promoția 2007. 
-                Îndrăgostită de copii am știut din prima zi de medicina că visul meu este pediatria. 
-                Am avut marea șansă și ocazie să lucrez  6 ani în Irlanda, la 8 spitale universitare , 
-                inclusiv la spitalele de top din Dublin. 
-                (Coombe University Hospital Rotunda University Hospital, OLCHC, Temple Street National Childen Hospital ) 
-                Am lucrat cu pacienți și cu medici din toate colțurile lumii. 
-                Am fost apreciată de directorii și profesorii universitari din spitalele unde am lucrat, 
-                de la care în semn de apreciere am primit o vază personalizata (o puteți vedea în poze), 
-                care spune mai multe decât aș putea eu să spun. 
-                Am predat studenților din Irlanda, am participat la numeroase conferințe internaționale. 
-                <br><br>
-                De ce am venit acasă? Pentru ca pur și simplu am simțit că România este casa mea. 
-                Nopțile lungi și istovitoare din urgente, săptămâni după săptămâni de ploi și vânt, absenta soarelui, 
-                iernile fără zăpadă... sunt doar câteva dintre motivele principale.
-                <br><br>
-                În anul 2018 am participat la cursurile de ecografie de sold, organizate la Dublin, 
-                sub îndrumarea marelui profesor Graff, fondator al ecografiei de sold. 
-                In anul 2019 am participat  la cursul de ecografie transfontanelara organizat la Cambridge . 
-                În anul 2019 am sustinut cu succes examenul de competența în ultrasonografie organizat la Cluj Napoca 
-                sub îndrumarea domnilor  profesori Petre Mircea, Radu Badea, Sorin Dudea. 
-                <br><br>
-                Sunt pediatru, dar pentru că sunt si mămica a doi copilași, înțeleg extrem de bine toate greutățile copilăriei. 
-                Viroze, bolile copilăriei, gastroenterite, pneumonii, amigdalite, erupții, alergii... 
-                și multe altele le-am experimentat din păcate și din postura de părinte. 
-                A fost greu... dar foarte util, deoarece acum privesc lucrurile cu multă empatie și responsabilitate.
-                <br><br>
-                Aștept cu nerăbdare sa ne cunoaștem.
-            </div>
+    <div class="row" id="doctor">
+        <div class="section-title"></div>
     </div>
+    <div class="section row">
+        <div class="col-md-2"></div>
+        <div class="col-md-3 section-about">
+            <div>
+                Dr. Burlacu Maria Monica<br>
+                Medic Specialist Pediatrie
+            </div>
+            <img src="{{ asset('assets/images/gallery/doctor-5.jpg') }}">
+            <img src="{{ asset('assets/images/gallery/doctor-4.jpg') }}">
+        </div>
+        <div class="col-md-5 section-about">
+            Numele meu este Burlacu Maria Monica, sunt absolventa a Facultății de Medicina și Farmacie "Iuliu Hatieganu" Cluj Napoca, 
+            promoția 2007. Îndrăgostită de copii am știut din prima zi de medicina că visul meu este pediatria. 
+            <br><br>
+            Am avut marea șansă și ocazie să lucrez 6 ani în Irlanda, la 8 spitale universitare, inclusiv la spitalele de top din Dublin. 
+            (Coombe University Hospital Rotunda University Hospital, OLCHC, Temple Street National Childen Hospital) 
+            Acolo am făcut 80 % din training-ul meu ca pediatru. Am lucrat cu pacienți și colegi medici din toate colțurile lumii. 
+            Am fost apreciată de directorii și profesorii universitari din spitalele unde am lucrat, 
+            (de la care în semn de apreciere am primit o vază personalizata pe care o puteți vedea în secțiunea galerie ). 
+            Am predat studenților din Irlanda, am participat la numeroase conferințe internaționale. 
+            <br><br>
+            De ce am revenit acasă? 
+            Pentru ca pur și simplu am simțit că in România este casa mea. Nopțile lungi și istovitoare din urgente, 
+            săptămâni întregi de ploi și vânt, absenta soarelui, iernile fără zăpadă... sunt doar câteva dintre motivele principale. 
+            <br><br>
+            În anul 2018 am participat la cursurile de ecografie de sold, organizate la Dublin, sub îndrumarea marelui profesor Graff, 
+            fondator al ecografiei de sold. In anul 2019 am participat la cursul de ecografie transfontanelara organizat la Cambridge . 
+            În anul 2019 am sustinut cu succes examenul de competența în ultrasonografie organizat la Cluj Napoca sub îndrumarea domnilor  
+            profesori Petre Mircea, Radu Badea, Sorin Dudea. Am finalizat cursurile de, Advance paediatric life suport din UK și PALS plus NRP din America. 
+            <br><br>
+            Sunt pediatru dar in același timp sunt mămică, motiv pentru care înțeleg și privesc toate aspectele cu multă empatie și responsabilitate.
+            <br><br>
+            Aștept cu nerăbdare sa ne cunoaștem.
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+    <div class="row" id="testimonials">
+        <div class="section-title">Testimoniale</div>
+    </div>
+    <div class="row testimonials">
+        <div id="carousel-testimonials" class="carousel slide carousel-text" data-ride="carousel">
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "... este mare nevoie de OAMENI ca d-voastra, si ca ati ales sa deschideti cabinetul in Floresti, aproape de noi.
+                            Ceea ce va face un medic perfect este faptul ca nu va lipseste nici una din urmatoarele calitati: profesionalism, empatie, formare continua, raspundeti solicitarilor in timp scurt, si lista poate continua.
+                            Cand am fost la d-voastra prima data cu fetita (avea cred 2 ani 6 luni) am vazut pentru prima data cum trebuie sa fie un control pediatric complet, complex, fara "pe repede inainte", 
+                            fara ca diagnosticul sa fie pus in primele 2 minute si inainte ca eu sa termin de spus tot ce se intampla cu copilul. 
+                            Ati stabilit mai intai o legatura cu micul pacient, l-ati facut sa se simta intr-un loc familiar, sa se simta confortabil in momentul controlului. 
+                            Asa ceva se intampla extrem de rar la alti medici din privat. 
+                            Va admir enorm ca medic, ca om, ca mama si ma intreb deseori cum reusiti sa le faceti pe toate, cum reusiti sa va impartiti in 1000 de parti si sa multumiti pe toata lumea!
+                            Cabinetul arata impecabil, fetita e indragostita de peretele acela cu bule ☺️, asistenta este foarte competenta si mereu cu zambetul pe buze!"
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Buna ziua! 
+                            Sunteți un medic excepțional, un medic care explica pas cu pas ceea ce trebuie făcut 
+                            pe întelesul fiecărui părinte. Nu am cuvinte sa va mulțumesc ceea ce ați făcut pentru Antonia și 
+                            cu siguranța o sa faceți la fel de bine și in continuare. 
+                            Venim cu mare drag la cabinetul dumneavoastră pentru ca am văzut ca ne dați cele mai bune sfaturi.
+                            Va multumim pentru tot!"
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Si noi suntem foarte multumiti de serviciile oferite de Dvs.
+                            Prima vizita a fost, cand fetita mea avea 2 saptamani, si ati consultat-o cu mare atentie si 
+                            grija din cap pana in picioare. Pe mine m-a impresionat cat de migaloasa ati fost, si cu multa rabdare. 
+                            Nu ati omis nici o particica a corpului. Ati verificat toooot. 
+                            V-ati oprit din tot sa ii dau laptic si nu ne-ati grabit. 
+                            Chiar Dvs ne tot ziceati sa va intrebam orice, daca avem nelamuri, intrebari.
+                            Apreciem nespus de mult profesionalismul Dvs. 
+                            Sunteti o persoana foarte simpatica, blanda, prietenoasa si cu lipici la pitici si parinti. 
+                            Va multumim pentru sfaturile date prin mesaj chiar de acolo din Irlanda, ne-au ajutat mult. 
+                            Multi medici ar trebui sa invete de la Dvs ce inseamna empatia, rabdarea.
+                            Multumim pt tot si sa stiti ca noi nu am schimba nimic. Cabinetul este mereu curat si primitor."
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Am fost foarte mulțumiți de d-voastră, de modul cum am fost tratați, 
+                            de cum ați investigat totul și ne-ați lămurit orice v-am întrebat 
+                            (chiar dacă v-am scris la ore târzii sau v-am sunat în weekend, 
+                            v-ați răpit din timpul d-voastră și mi-ați răspuns), de curățenia din cabinet și modul cum lucrați, 
+                            și nu în ultimul rând de doamna asistentă, pentru că și ea este importantă și 
+                            tot timpul a fost drăguță cu noi și a lucrat prompt și "ca la carte". 
+                            Numai lucruri bune am la adresa d-voastră și a cabinetului. 
+                            Și toate astea contează foarte mult ca pacient."
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Am rămas uimita când la telefon mi-ați zis ca pot plăti și zilele următoare dacă nu am toți banii la mine... 
+                            Asa ceva mai rar se întâmplă."
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Pana sa ajung la cabinetul dvs. am trecut pragul nu puținor cabinete medicale, iar eu fiind asistent medical aveam si anumite pretentii. 
+                            Vă multumesc pentru tot profesionalismul si rabdarea de care ati dat dovada! Pe o scară de la 1 la 10 as pune 10+ ! Va asteptam acasa!"
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "A fost o experienta minunata (v-am recomandat ulterior tuturor).
+                            De la atmosfera cabinetului la căldură cu care ne-ați primit și răbdarea de care ați dat dovada.
+                            Deși nevoia încă nu ne-a împins la alta vizita sunteți omul la care o sa apelam mereu."
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Am avut o super surpriza când i-ați recoltat chiar dumneavoastră la E.... și totul a fost la superlativ. 
+                            Nici nu am curaj sa ii repet analizele în alta parte pana nu va întoarceți. 
+                            Abia aștept sa reveniți! 
+                            Pe viitor legat de partea de "perfecționare" ați putea lucra la timpul de așteptare, deși știu ca e greu... "
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Dupa ce am apelat la serviciile dvs, asteptarile mi-au fost mult depasite. 
+                            Nu mi-a venit sa cred ca dvs, ca doctor, luati PERSONAL sange micilor pacienti pentru analize, 
+                            iar experienta sa nu fie deloc traumatizanta pentru ei (nu se intampla asta in Romania si am fost placut surprinsa). 
+                            M... vine cu placere la cabinet, la plecare ma roaga sa il mai las putin ca imi promite ca e cuminte :)
+                            Va multumim pentru tot! Pentru implicare, sacrificiile pe care le faceti ca sa fiti mereu acolo cand avem nevoie de dvs, 
+                            pentru sfaturi si pentru ca, inainte de a fi doctor, sunteti un om cu suflet mare si o mama care stie ce inseamna grija de parinte."
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Sunteți un medic excepțional, un medic care explica pas cu pas ceea ce trebuie făcut pe întelesul fiecărui părinte. 
+                            Nu am cuvinte sa va mulțumesc ceea ce ați făcut pentru A.... și cu siguranța o sa faceți la fel de bine și in continuare. 
+                            Venim cu mare drag la cabinetul dumneavoastră pentru ca am văzut ca ne dați cele mai bune sfaturi.
+                            Va multumim pentru tot!
+                            Abia așteptăm sa va întoarceți acasă! Nu am nemulțumiri."
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "Da, am fost foarte mulțumiți de d-voastră, de modul cum am fost tratați, de cum ați investigat totul și ne-ați lămurit orice v-am întrebat , de curățenia din cabinet și modul cum lucrați, și nu în ultimul rând de doamna asistentă, pentru că și ea este importantă și tot timpul a fost drăguță cu noi și a lucrat prompt și "ca la carte". Numai lucruri bune am la adresa d-voastră și a cabinetului. Și toate astea contează foarte mult ca pacient.
+                            Singurul regret, să zic așa, este că nu am avut timp mai mult la dispoziție să stăm în cabinet, dar asta nu este vina d-voastră, ci timpul e de vină, pentru că sunteți așa solicitată ( asta înseamnă că vă faceți datoria cum trebuie și puneți mult suflet în tot).
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            "sunteti foarte rabdatoare,foarte calda,blanda...fetita doar la dvs vrea sa vina la cabinet!<br>
+                            -oferiti informatii suplimentare si raspundeti la toate intrebarile;<br>
+                            -indiferent de zi sau chiar sarbatoare legala,dvs ati raspuns la orice mesaj;<br>
+                            -nu oferiti antibiotice imediat,ci recomandati analize,control si medicamente doar la nevoie!<br>
+                            -timp de asteptare sa intram la vizita foarte ok;<br>
+                            -daca am sunat si nu s-a raspuns,s-a revenit in cel mai scurt timp posibil cu un telefon;<br>
+                            -cabinetul arata foarte frumos,mereu curat si primitor!<br>
+                            -dna asistenta vorbeste frumos si raspunde la telefon imediat.<br>
+                            Si lista poate continua!"
+                        </span>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="crousel-item-inner d-flex align-items-center justify-content-center">
+                        <span>
+                            Am numai si numai cuvinte de lauda la adresa dvs,profesional sunteti un doctor exceptional (la orice subiect oferiti multe, multe informatii si mereu sunteti la curent cu totul) si sunteti mama, aveti mereu cuvintele de linistire la dvs."
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-testimonials" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-testimonials" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
     <div class="row" id="prices">
         <div class="section-title">Tarife</div>
     </div>
@@ -57,9 +223,9 @@
         <div class="prices">
             <table>
                 <tr>
-                    <td>Consultatie</td>
-                    <td>In zilele de Luni-Vineri</td>
-                    <td>Sambata, Duminica si sarbatori legale</td>
+                    <td class="table-header">Consultație</td>
+                    <td class="table-header">În zilele de Luni-Vineri</td>
+                    <td class="table-header">Sâmbăta, Duminica și sărbători legale</td>
                 </tr>
                 <tr>
                     <td>Consult de specialitate pediatrie</td>
@@ -67,7 +233,7 @@
                     <td>200 RON</td>
                 </tr>
                 <tr>
-                    <td>Consult de specialitate 2 copii la aceeasi programare</td>
+                    <td>Consult de specialitate 2 copii la aceeași programare</td>
                     <td>220 RON</td>
                     <td>300 RON</td>
                 </tr>
@@ -77,29 +243,170 @@
                     <td>100 RON</td>
                 </tr>
                 <tr>
-                    <td>ecografie de sold</td>
+                    <td>Ecografie de sold</td>
                     <td colspan="2">150 RON</td>
                 </tr>
                 <tr>
-                    <td>ecografie toracica</td>
+                    <td>Ecografie toracică</td>
                     <td colspan="2">100 RON</td>
                 </tr>
                 <tr>
-                    <td>ecografie abdominala</td>
+                    <td>Ecografie abdominală</td>
                     <td colspan="2">150 RON</td>
                 </tr>
                 <tr>
-                    <td>Consultații on-line</td>
+                    <td>Consultanță on-line</td>
                     <td colspan="2">100 RON</td>
                 </tr>
             </table>
         </div>
     </div>
 
-    {#<div class="row" id="gallery">
+    <div class="row" id="gallery">
         <div class="section-title">Galerie</div>
     </div>
-    <div class="row gallery-caroussels">
+    <div class="gallery-images">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-1.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-1.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-2.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-2.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-3.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-3.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-4.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-4.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-5.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-5.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-6.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-6.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-7.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-7.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-8.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-8.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-9.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-9.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/cabinet-1.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/cabinet-1.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/cabinet-2.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/cabinet-2.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/cabinet-3.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/cabinet-3.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/cabinet-4.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/cabinet-4.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/cabinet-5.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/cabinet-5.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/cabinet-6.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/cabinet-6.jpg') }}" width="100%">
+                </a>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
 
-    </div>#}
+        {#<div class="row">
+            <ul>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-5.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-5.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-6.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-6.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-7.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-7.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-8.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-8.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-1.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-1.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-2.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-2.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-3.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-3.jpg') }}" width="200">
+                </a></li>
+                <li><a href="#" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-4.jpg') }}">
+                    <img src="{{ asset('assets/images/gallery/doctor-4.jpg') }}" width="200">
+                </a></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>#}
+
+        {#<div class="row">
+            <div style="background: url({{ asset('assets/images/gallery/doctor-3.jpg') }}) 50% 50% no-repeat;width: 250px;height: 250px;" data-toggle="modal" data-target="#imageModal" data-image="{{ asset('assets/images/gallery/doctor-3.jpg') }}">
+                    </div>
+        </div>#}
+
+        <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="{{ asset('assets/images/gallery/doctor-1.jpg') }}" width="100%">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

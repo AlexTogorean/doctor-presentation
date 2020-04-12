@@ -1,36 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Adauga o consultatie!{% endblock %}
+{% block title %}Pediatrie Florești | Programează o consultanță on-line{% endblock %}
 
 {% block body %}
     <div class="row">
-        <div class="section-title">Programeaza o consultatie online</div>
+        <div class="section-title">Programează o consultanță on-line</div>
     </div>
-    <div class="">
-        <div class="form">
+    {% if submitted is defined %}
+        <div class="row text-center">
+            <div class="col-md-12 consultation-confirmation">Cerere de consultanță on-line salvată</div>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="form col-lg-7">
             {{ form_start(form, {attr: {'novalidate': 'novalidate'}}) }}
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Nume</label>
                     <div class="col-sm-10">
                         {{ form_widget(form.name, { 'attr': { 'class': 'form-control' } }) }}
+                        {% if (form.name.vars.errors|length > 0) %}
+                            <div class="error">Numele este obligatoriu.</div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                         {{ form_widget(form.email, { 'attr': { 'class': 'form-control' } }) }}
+                        {% if (form.email.vars.errors|length > 0) %}
+                            <div class="error">Adresa de email este obligatorie.</div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Telefon</label>
                     <div class="col-sm-10">
                         {{ form_widget(form.phone, { 'attr': { 'class': 'form-control' } }) }}
+                        {% if (form.phone.vars.errors|length > 0) %}
+                            <div class="error">Numarul de telefon este obligatoriu.</div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Mesaj</label>
                     <div class="col-sm-10">
-                        {{ form_widget(form.message, { 'attr': { 'class': 'form-control' } }) }}
+                        {{ form_widget(form.message, { 'attr': { 'class': 'form-control', 'placeholder': 'Descrieți pe scurt problema ...' } }) }}
                     </div>
                 </div>
                 <div class="form-group row">
@@ -39,8 +54,11 @@
                         <div class="form-check">
                             {{ form_widget(form.acceptGdpr, { 'attr': { 'class': 'form-check-input' } }) }}
                             <label class="form-check-label" for="gdpr">
-                                GDPR
+                                Am citit și sunt de acord cu <a href="{{ path('app_gdpr') }}" target="_blank">condițiile de prelucrare a datelor personale (GDPR)</a>
                             </label>
+                            {% if (form.acceptGdpr.vars.errors|length > 0) %}
+                                <div class="error">Trebuie sa fiti de acord cu regulile GDPR.</div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -50,17 +68,32 @@
                         <div class="form-check">
                             {{ form_widget(form.acceptTerms, { 'attr': { 'class': 'form-check-input' } }) }}
                             <label class="form-check-label" for="terms">
-                                Terms
+                                Am citit și sunt de acord cu <a href="{{ path('app_terms') }}" target="_blank">termenii și condițiile</a>
                             </label>
+                            {% if (form.acceptTerms.vars.errors|length > 0) %}
+                                <div class="error">Trebuie sa fiti de acord cu termenii si conditiile.</div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-sm-10">
-                        {{ form_row(form.submit, { 'attr': { 'class': 'btn btn-primary' } }) }}
+                    <div class="col-sm-10 text-center">
+                        {{ form_row(form.submit, { 'attr': { 'class': 'btn btn-primary' }, 'label': 'Trimite' }) }}
                     </div>
                 </div>
             {{ form_end(form) }}
         </div>
+        <div class="col-lg-3 consultation-about">
+            Scopul serviciului de CONSULTANȚĂ ONLINE este să protejăm în această perioadă persoanele vulnerabile (vârstnici, copii) 
+            și să oferim un ajutor celor aflați în imposibilitatea de a se deplasa la cabinetul medical 
+            (persoane aflate în carantină/autoizolare etc). CONSULTANȚA ONLINE nu este echivalentul consultației medicale 
+            efectuată de către un medic în cabinet, nu se adresează urgențelor majore și are limitele ei evidente. 
+            Pentru că dorim să fim corecți cu pacienții noștri, protocolul de lucru prevede următorii pași: 
+            după ce vă încărcați datele personale, vă rugăm să faceți o scurtă descriere a problemei pe care o aveți. 
+            Pentru a valida solicitarea este nevoie să citiți și să fiți de acord cu 
+            “Termenii și condiții”, respectiv “Condițiile de prelucrare a datelor personale” (GDPR). 
+            În maxim 12 ore veți fi contactați de către medic prin email și/sau telefon pentru detaliile procesului de CONSULTANȚĂ ONLINE.
+        </div>
+        <div class="col-lg-1"></div>
     </div>
 {% endblock %}

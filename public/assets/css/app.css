@@ -4,13 +4,31 @@
 
 
 .footer-credits {
-    background-color: #9a9a9a;
-    padding: 30px;
+    background-color: cadetblue;
+    padding: 20px 30px;
 }
 
 .footer-pages {
-    background-color: #666666;
-    padding: 30px;
+    background-color: #3c6465;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer-title {
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: black 1px solid;
+    padding: 10px;
+}
+
+.footer-content {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    color: black;
 }
 
 .copyright-text {
@@ -91,15 +109,19 @@
     font-size: large;
 }
 
+.section .section-about img {
+    width: 100%;
+    padding: 20px 0;
+}
+
 .section .section-about {
-    padding: 50px;
     text-align: justify;
 }
 
 .section-title {
-    font-size: 25px;
+    font-size: 28px;
     margin: 0 auto;
-    padding: 20px 0px 20px 0px;
+    padding: 30px 0px 30px 0px;
 }
 
 .prices {
@@ -113,19 +135,56 @@
     text-align: center;
 }
 
+.prices .table-header {
+    font-weight: bold;
+}
+
 .form {
-    padding: 30px;
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 20px;
+}
+
+.form .error {
+    font-size: 10px;
+    color: red;
+}
+
+.consultation-about {
+    font-size: 13px;
+    padding: 20px;
+    text-align: justify;
+}
+
+.consultation-confirmation {
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .gallery-caroussels {
     padding-bottom: 100px;
 }
 
-.carousel-item {
-    height: 600px;
-    align-items: center;
+.gallery-images ul {
+    list-style: none;
+}
+
+.gallery-images li {
+    float: left;
+    padding: 10px;
+}
+
+.gallery-images img {
+    padding-bottom: 10px;
+}
+
+.testimonials {
+    background-color: cadetblue;
+}
+
+#carousel-testimonials {
+    width: 100%;
+    padding: 30px 15% 30px 15%;
 }
 
 /* Util */

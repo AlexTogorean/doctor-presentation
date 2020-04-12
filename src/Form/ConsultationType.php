@@ -28,7 +28,11 @@ class ConsultationType extends AbstractType
                     new Email()
                 ]
             ])
-            ->add('phone')
+            ->add('phone', TextType::class, [
+                'constraints' => [
+                    new NotBlank()
+                ]
+            ])
             ->add('message')
             ->add('acceptTerms', CheckboxType::class, [
                 'constraints' => [

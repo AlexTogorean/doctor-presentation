@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ConsultationController extends AbstractController
 {
     /**
-     * @Route("/consultatie-on-line", name="app_consultation")
+     * @Route("/consultanta-on-line", name="app_consultation")
      */
     public function index(Request $request)
     {
@@ -24,22 +24,17 @@ class ConsultationController extends AbstractController
             $entityManager->persist($form->getData());
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_consultation_confirmation');
+            $consultation = new Consultation();
+            $form = $this->createForm(ConsultationType::class, $consultation);
+
+            return $this->render('consultation/index.html.twig', [
+                'form' => $form->createView(),
+                'submitted' => true
+            ]);
         }
 
         return $this->render('consultation/index.html.twig', [
-            'controller_name' => 'ConsultationController',
             'form' => $form->createView()
-        ]);
-    }
-    
-    /**
-     * @Route("/confirmare-consultatie-on-line", name="app_consultation_confirmation")
-     */
-    public function confirmation(Request $request)
-    {
-        return $this->render('consultation/confirmation.html.twig', [
-            'controller_name' => 'ConsultationController',
         ]);
     }
 }
