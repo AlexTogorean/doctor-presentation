@@ -2,7 +2,7 @@ easy_admin:
     entities:
         # List the entity class name you want to manage
         - App\Entity\Consultation
-    site_name: ala bala
+    site_name: Pediatrie Floresti
     translation_domain: 'admin'
     user:
         display_name: true
