@@ -10,6 +10,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link href="{{ asset('assets/css/fontawesome-all.min.css') }}" rel="stylesheet"/>
             <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet"/>
         {% endblock %}
     </head>
@@ -33,6 +34,22 @@
 
             <div class="footer-pages row">
                 <div class="col-md-4">
+                    <div class="footer-company">
+                        PAEDIATRICS BEST PRACTICE SRL<br>
+                        J12/1806/2017; CUI 37437978<br>
+                        Sediu: Florești, str. Porii, nr. 154, ap. 22<br>
+                        Cont bancar: RO54BTRLRONCRT0391503101
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-title">
+                        Date de contact
+                    </div>
+                    <div class="footer-content">
+                        <i class="fas fa-map-marker-alt"></i> Florești, str. Eroilor, nr. 168, ap. 1<br>
+                        <i class="fa fa-phone"></i> 0757 995 567<br>
+                        <i class="fas fa-at"></i> pedi.floresti@yahoo.com
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="footer-title">
@@ -44,14 +61,6 @@
                             <li><a href="{{ path('app_terms') }}">Termeni și condiții pentru consultanță on-line</a></li>
                             <li><a href="{{ path('app_gdpr') }}">Consimțământ de prelucrare a datelor cu caracter personal</a></li>
                         </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="footer-title">
-                        Unde ne găsiți
-                    </div>
-                    <div class="footer-content">
-                        Florești, Str. Eroilor, nr. 168, Ap. 1
                     </div>
                 </div>
             </div>
