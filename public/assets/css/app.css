@@ -79,7 +79,7 @@
 .banner {
     text-align: center;
     padding: 130px 0px 130px 0px;
-    background-image: url("/assets/images/cover-cropped.jpg");
+    background-image: url("/assets/images/gallery/image-24.jpg");
     background-position-y: center;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -186,6 +186,11 @@
     max-width: 500px;
     margin: 0 auto;
     padding: 50px;
+}
+
+.terms-text {
+    font-size: 13px;
+    text-align: justify;
 }
 
 /* Util */

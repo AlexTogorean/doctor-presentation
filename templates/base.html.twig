@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Medic Specialist Pediatrie, Doctor Burlacu Maria Monica, Cabinet de pediatrie Floresti">
+        <meta name="og:title" property="og:title" content="Medic Specialist Pediatrie, Doctor Burlacu Maria Monica, Cabinet de pediatrie Floresti">
+        <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}" />
 
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
@@ -19,8 +22,8 @@
                 </div>
                 <div class="menu col-sm-10 row">
                     <div class="col-md-3"></div>
+                    <div class="col-md-2">{#<a href="{{ path('app_homepage') }}#doctor">Doctor</a>#}</div>
                     <div class="col-md-3"><a href="{{ path('app_consultation') }}">Consultanță on-line</a></div>
-                    <div class="col-md-2"><a href="{{ path('app_homepage') }}#doctor">Doctor</a></div>
                     <div class="col-md-2"><a href="{{ path('app_homepage') }}#prices">Tarife</a></div>
                     <div class="col-md-2"><a href="{{ path('app_homepage') }}#gallery">Galerie</a></div>
                 </div>
@@ -53,8 +56,8 @@
                 </div>
             </div>
             <div class="footer-credits row">
-                <div class="copyright-text col-md-10">© 2020 Paediatrics Best Practice</div>
-                <div class="design-by col-md-2">Design by</div>
+                <div class="copyright-text col-md-10">© 2020 PAEDIATRICS BEST PRACTICE SRL</div>
+                <div class="design-by col-md-2"></div>
             </div>
         </div>
 
